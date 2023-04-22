@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
         <button
           type='button'
           onClick={() =>
-            window.open("https://github.com/fahiz677", "_blank")
+            window.open("https://github.com/fahiz677/AI_ARTICLE-SUMMARIZER-RAPIDAPI", "_blank")
           }
           className='black_btn '
         >
