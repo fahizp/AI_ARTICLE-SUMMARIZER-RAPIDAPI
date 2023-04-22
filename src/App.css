@@ -118,3 +118,19 @@
 .nav {
   @apply flex justify-between items-center w-full mb-10 pt-3
 }
+
+.search {
+  @apply flex flex-col w-full gap-2
+}
+
+.section {
+  @apply mt-16 w-full max-w-xl
+}
+
+.from {
+  @apply relative flex justify-center items-center
+}
+
+.demo-img {
+  @apply absolute left-0 my-2 ml-3 w-5
+}
