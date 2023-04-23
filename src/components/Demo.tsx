@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { FetchBaseQueryError } from "@reduxjs/toolkit/dist/query";
 import { copy, linkIcon, loader, tick } from "../assets";
 import { useLazyGetSummaryQuery } from "../services/article";
 
@@ -73,18 +72,21 @@ const Demo = () => {
     setTimeout(() => setCopied(""), 3000);
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement> | any) => {
-    if (e.keyCode === 13) {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement> | any ) => {
+    if (e.key === "enter") {
       handleSubmit(e);
     }
   };
 
+  const clearInput = () => {
+      setArticle({url:'',summary:''})
+  }
   return (
     <section className="section">
       {/* Search */}
       <div className="search">
         <form className="from" onSubmit={handleSubmit}>
-          <img src={linkIcon} alt="link-icon" className="demo-img" />
+          <img src={linkIcon} alt="link-icon" className="demo-img" onClick={clearInput}/>
 
           <input
             type="url"
@@ -137,7 +139,7 @@ const Demo = () => {
           <p className="display-p">
             Well, that wasn't supposed to happen...
             <br />
-            <span className="dispaly-span">{isError?.data?.error}</span>
+            {/* <span className="dispaly-span">{isError?.data?.error}</span> */}
           </p>
         ) : (
           article.summary && (
