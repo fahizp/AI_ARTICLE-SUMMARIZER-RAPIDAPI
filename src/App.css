@@ -134,3 +134,42 @@
 .demo-img {
   @apply absolute left-0 my-2 ml-3 w-5
 }
+
+.browse-history {
+  @apply flex flex-col gap-1 max-h-60 overflow-y-auto
+}
+.browse-img {
+  @apply w-[40%] h-[40%] object-contain 
+}
+
+.browse-p {
+  @apply flex-1 font-satoshi text-blue-700 font-medium text-sm truncate
+}
+
+.display-result {
+  @apply my-10 max-w-full flex justify-center items-center
+}
+
+.loader{
+  @apply w-20 h-20 object-contain
+}
+
+.display-p {
+  @apply font-inter font-bold text-black text-center
+}
+
+.display-span {
+  @apply font-satoshi font-normal text-gray-700
+}
+
+.display-summary-div {
+  @apply flex flex-col gap-3
+}
+
+.display-summary-h2 {
+  @apply font-satoshi font-bold text-gray-600 text-xl
+}
+
+.display-summary-p{
+  @apply font-inter font-medium text-sm text-gray-700
+}
